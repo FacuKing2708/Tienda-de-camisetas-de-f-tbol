@@ -35,21 +35,53 @@ elif pagina == "Tienda":
 
     categoria = st.selectbox("Selecciona categoría", ["Ligas", "Selecciones"])
 
+    # 🔸 LIGAS
     if categoria == "Ligas":
         st.subheader("⚽ Ligas")
-        st.write("Equipos disponibles:")
-        st.write("- FC Barcelona")
-        st.write("- Real Madrid")
-        st.write("- Manchester United")
 
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st.image("https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg", width=150)
+            st.write("**FC Barcelona**")
+            st.write("💰 $70")
+            st.button("Comprar Barcelona")
+
+        with col2:
+            st.image("https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg", width=150)
+            st.write("**Real Madrid**")
+            st.write("💰 $75")
+            st.button("Comprar Madrid")
+
+        with col3:
+            st.image("https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg", width=150)
+            st.write("**Manchester United**")
+            st.write("💰 $65")
+            st.button("Comprar United")
+
+    # 🔸 SELECCIONES
     elif categoria == "Selecciones":
         st.subheader("🌎 Selecciones")
-        st.write("Equipos disponibles:")
-        st.write("- Perú")
-        st.write("- Argentina")
-        st.write("- Brasil")
 
-    st.button("Agregar al carrito 🛍️")
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st.image("https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg", width=150)
+            st.write("**Perú**")
+            st.write("💰 $60")
+            st.button("Comprar Perú")
+
+        with col2:
+            st.image("https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg", width=150)
+            st.write("**Argentina**")
+            st.write("💰 $70")
+            st.button("Comprar Argentina")
+
+        with col3:
+            st.image("https://upload.wikimedia.org/wikipedia/en/0/05/Brazil_national_football_team_logo.svg", width=150)
+            st.write("**Brasil**")
+            st.write("💰 $68")
+            st.button("Comprar Brasil")
 
 # 🔹 NOSOTROS
 elif pagina == "Nosotros":
@@ -65,8 +97,20 @@ elif pagina == "Nosotros":
 elif pagina == "Blog":
     st.title("📰 Blog")
 
-    st.subheader("Noticias")
-    st.write("Últimas novedades del fútbol mundial ⚽")
+    st.subheader("🔥 Última noticia")
+
+    st.image("https://images.unsplash.com/photo-1508098682722-e99c643e7f7b")
+
+    st.markdown("""
+    **El fútbol mundial se prepara para una nueva temporada llena de emoción ⚽**
+
+    Los grandes clubes de Europa como el Real Madrid, Barcelona y Manchester United
+    ya presentaron sus nuevas camisetas para la temporada, generando gran expectativa
+    entre los fanáticos.
+
+    Las selecciones también se preparan para próximas competiciones internacionales,
+    mostrando nuevos diseños innovadores.
+    """)
 
 # 🔹 CONTACTO
 elif pagina == "Contacto":
